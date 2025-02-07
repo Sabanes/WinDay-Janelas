@@ -1,0 +1,61 @@
+.marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0px 0;
+    background: transparent;
+  }
+  
+  .marquee-wrapper {
+    display: flex;
+    position: relative;
+    width: fit-content;
+    will-change: transform;
+  }
+  
+  .marquee h1 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 8rem;
+    line-height: 90%;
+    letter-spacing: -0.5rem;
+    white-space: nowrap;
+    padding-right: 50px;
+    will-change: transform;
+    color: var(--foreground, #f3ede2);
+  }
+  
+  .marquee,
+  .marquee-wrapper {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  @media (max-width: 1200px) {
+    .marquee h1 {
+        font-size: 7rem;
+        letter-spacing: -0.4rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .marquee h1 {
+        font-size: 6rem;
+        letter-spacing: -0.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .marquee h1 {
+        font-size: 5rem;
+        letter-spacing: -0.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .marquee h1 {
+        font-size: 4rem;
+        letter-spacing: -0.1rem;
+    }
+}

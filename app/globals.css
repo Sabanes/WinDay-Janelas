@@ -3,19 +3,110 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fbfbfb;
+  --foreground: #2b2b2b;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+body {
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+.manifesto {
+    position: relative;
+  }
+  
+  .manifesto-title h1 {
+    font-size: 6.5rem;
+    line-height: 1.125;
+    
+  }
+  
+  .manifesto-symbol {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+  }
+  
+  .manifesto .container {
+    padding: 20px;
+  }
+
+  @media (max-width: 1200px) {
+    .manifesto-title h1 {
+        font-size: 5rem;
+
+    }
+}
+
+@media (max-width: 992px) {
+    .manifesto-title h1 {
+        font-size: 2.3rem !important;
+
+    }
+}
+
+@media (max-width: 768px) {
+  .manifesto-title h1 {
+      font-size: 3rem;
+
+  }
+}
+
+@media (max-width: 480px) {
+  .manifesto-title h1 {
+      font-size: 3rem;
+
+  }
 }
