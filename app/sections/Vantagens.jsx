@@ -31,12 +31,12 @@ const Vantagens = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-6xl md:text-8xl text-center text-gray-900 mb-12">
-        Nossas Vantagens
+    <section className="py-12 bg-gray-50 md:w-[90dvw] mx-auto">
+      <div className=" mx-auto px-4">
+        <h2 className="text-6xl md:text-8xl text-left text-gray-900 mb-12">
+        Nossas <span className=' text-[#344CB7]'>Vantagens</span>
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto gap-10">
           {vantagens.map((vantagem, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <div className="flex items-center mb-4">

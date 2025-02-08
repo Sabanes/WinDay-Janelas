@@ -8,13 +8,13 @@ import Vantagens from "./sections/Vantagens";
 
 export default function Home() {
   return (
-          <>
+          <div >
           <Hero />
           <Sobre />
           <Servicos />
           <Conforto />
           <Vantagens />
           <Products />
-          </>
+          </div>
   );
 }

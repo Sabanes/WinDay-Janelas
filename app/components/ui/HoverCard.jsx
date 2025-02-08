@@ -12,7 +12,7 @@ export const HoverEffect = ({
   let [hoveredIndex, setHoveredIndex] = useState(null);
   
   return (
-    <div className={cn("grid grid-cols-1 md:grid-cols-2 gap-10 py-10", className)}>
+    <div className={cn("grid grid-cols-1 lg:grid-cols-2 max-w-7xl mx-auto gap-10 py-10", className)}>
       {items.map((item, idx) => (
         <Link
           href={item?.link}
