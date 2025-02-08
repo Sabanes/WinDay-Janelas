@@ -1,5 +1,6 @@
 import Conforto from "./sections/Conforto";
 import { Hero } from "./sections/Hero";
+import Products from "./sections/Products";
 import { Servicos } from "./sections/Serviços";
 
 import Sobre from "./sections/Sobre";
@@ -13,7 +14,7 @@ export default function Home() {
           <Servicos />
           <Conforto />
           <Vantagens />
-
+          <Products />
           </>
   );
 }
