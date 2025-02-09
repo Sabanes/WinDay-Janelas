@@ -4,7 +4,7 @@ import { HoverEffect } from "../components/ui/HoverCard";
 export function Servicos() {
   return (
     (<div id="Servicos" className="md:w-[90dvw] mx-auto max-w-7xl px-3 pt-40">
-      <h3 className="text-6xl md:text-8xl max-w-7xl text-right">Os Nossos <span className=" text-[#344CB7]">Serviços</span></h3>
+      <h3 className="text-6xl md:text-8xl max-w-7xl text-right">Os Nossos <span className=" text-[#493F0B]">Serviços</span></h3>
       <HoverEffect items={projects} />
     </div>)
   );

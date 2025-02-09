@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: #fbfbfb;
+  --background: #d3d3d3;
   --foreground: #2b2b2b;
+  --main: #493F0B;
 }
 
 
@@ -67,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .manifesto-title h1 {
-    font-size: 6.5rem;
+    font-size: 5rem;
     line-height: 1.125;
     
   }
@@ -85,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
 
   @media (max-width: 1200px) {
     .manifesto-title h1 {
-        font-size: 5rem;
+        font-size: 4rem;
 
     }
 }

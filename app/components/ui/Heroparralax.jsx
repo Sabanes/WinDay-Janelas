@@ -63,7 +63,7 @@ export const Header = () => {
     <div id="Home"
       className="max-w-7xl md:min-h-[40rem] min-h-[30rem] relative mx-auto flex flex-col justify-center items-center px-4  z-30">
       <h1 className="text-4xl lg:text-[7rem] md:text-7xl text-center font-bold text-[#2b2b2b]">
-        Janelas e Portas  <br /> de <span className="text-[#344CB7]">Alta Qualidade</span>
+        Janelas e Portas  <br /> de <span className="text-[var(--main)]">Alta Qualidade</span>
       </h1>
       <p className="max-w-xl text-base md:text-xl mt-3 text-center text-neutral-900">
       As nossas janelas e portas em PVC e alumínio são duráveis, isolantes e de design moderno, oferecendo conforto e eficiência com baixa manutenção. </p>

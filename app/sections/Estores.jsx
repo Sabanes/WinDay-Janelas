@@ -4,7 +4,7 @@ export default function EstoresSection() {
   return (
     <section className=" py-16 max-w-7xl mx-auto">
       <div className="container mx-auto px-4">
-        <h2 className="text-6xl md:text-8xl font-regular text-[#344CB7] mb-8 text-center">Estores</h2>
+        <h2 className="text-6xl md:text-8xl font-regular text-[var(--main)] mb-8 text-center">Estores</h2>
         <div className="flex flex-col md:py-20 lg:flex-row items-center gap-8">
           <div className="lg:w-1/2">
             <Image
@@ -33,7 +33,7 @@ export default function EstoresSection() {
             <div className="mt-6">
               <a
                 href="https://tally.so/r/w5eP5Q"
-                className="inline-block bg-[#344CB7] text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 ease-in-out"
+                className="inline-block bg-[var(--main)] text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 ease-in-out"
               >
                                 Peça já Orçamento Grátis
 

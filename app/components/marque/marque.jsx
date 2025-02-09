@@ -96,7 +96,7 @@ const Marquee = () => {
     <div className="marquee !py-40">
       <div className="marquee-wrapper" ref={wrapperRef}>
         <div className="marquee-content ">
-          <h1 className="!text-[#344CB7] ">
+          <h1 className="!text-[var(--main)] ">
             - QUEM SOMOS? — QUEM SOMOS? — QUEM SOMOS? —
             QUEM SOMOS? 
           </h1>

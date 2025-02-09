@@ -1,9 +1,9 @@
-import Link from 'next/link';
+
 import { FiInstagram, FiFacebook, FiPhone, FiMail } from 'react-icons/fi';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#344CB7] text-white pt-12 mt-20">
+    <footer className="!bg-[var(--main)] text-white pt-12 mt-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Quick Links */}

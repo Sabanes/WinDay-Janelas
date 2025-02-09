@@ -60,7 +60,7 @@ const Conforto = () => {
         ref={headingRef} 
         className='text-4xl md:text-8xl text-center'
       >
-        "O Seu <span className='text-[#344CB7]'>Conforto</span> É A Nossa Prioridade"
+        "O Seu <span className='text-[var(--main)]'>Conforto</span> É A Nossa Prioridade"
       </h4>
       <p 
         ref={quoteRef}

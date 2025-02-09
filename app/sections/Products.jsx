@@ -5,7 +5,7 @@ const Products = () => {
   return (
     <section id="Produtos" className='py-40 flex flex-col max-w-7xl mx-auto md:w-[90dvw]'>
       <h6 className='text-6xl md:text-8xl text-center md:pr-0 pr-4'>
-        <span className='text-[#344CB7]'>Janelas e Portas</span> PVC
+        <span className='text-[var(--main)]'>Janelas e Portas</span> PVC
       </h6>
       
       <p className='self-left text-xl text-left py-7 pt-20 md:pl-0 pl-6 md:max-w-[80%] max-w-[90%]'>
@@ -25,8 +25,8 @@ const Products = () => {
       />  
 
       <div className='flex md:flex-row flex-col md:gap-20 gap-10 justify-between mx-auto max-w-7xl'>
-        <div className='flex md:w-[50vw] w-[90vw] flex-col items-center bg-[#344CB7] rounded-lg py-8 px-4'>
-          <div className='flex flex-col items-center bg-white p-2 rounded-lg'>
+        <div className='flex md:w-[50vw] w-[90vw] bg-[var(--main)] flex-col items-center rounded-lg py-8 px-4'>
+          <div className='flex flex-col items-center  bg-white p-2 rounded-lg'>
             <img 
               src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/gsjiz9rvlilfz1tw9g1s" 
               className='max-w-[300px] z-10' 
@@ -39,7 +39,7 @@ const Products = () => {
           </p>
         </div>
 
-        <div className='flex md:w-[50vw] w-[90vw] flex-col items-center bg-[#344CB7] rounded-lg py-8 px-4'>
+        <div className='flex md:w-[50vw] w-[90vw] flex-col items-center bg-[var(--main)] rounded-lg py-8 px-4'>
           <div className='flex flex-col items-center bg-white p-2 rounded-lg'>
             <img 
               src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/gsjiz9rvlilfz1tw9g1s" 

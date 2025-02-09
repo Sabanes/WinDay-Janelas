@@ -19,7 +19,7 @@ export default function TiposEstoresSection() {
               key={tipo.name}
               className="bg-gray-100 rounded-lg p-10 text-center hover:shadow-lg transition duration-300 ease-in-out"
             >
-              <tipo.Icon className="w-12 h-12 mx-auto mb-4 text-blue-600" />
+              <tipo.Icon className="w-12 h-12 mx-auto mb-4 text-[var(--main)]" />
               <h3 className="text-xl font-semibold text-gray-800">{tipo.name}</h3>
             </div>
           ))}
