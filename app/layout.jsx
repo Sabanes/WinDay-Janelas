@@ -44,7 +44,7 @@ export const metadata = {
   openGraph: {
     title: "Winday - Especialistas em Janelas Cortizo",
     description: "Soluções inovadoras em janelas de metaloplástico Cortizo para sua casa ou negócio. Especialistas em instalação e eficiência energética.",
-    url: 'https://www.windaypvc.pt/winday.jpg',
+    url: 'https://windaypvc.pt/winday.jpg',
     siteName: 'Winday',
     locale: 'pt_PT',
     type: 'website',
