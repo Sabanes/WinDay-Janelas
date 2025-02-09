@@ -2,7 +2,6 @@
 import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import Button from "./Button";
 
 export const HeroParallax = ({
@@ -68,7 +67,7 @@ export const Header = () => {
       </h1>
       <p className="max-w-xl text-base md:text-xl mt-3 text-center text-neutral-900">
       As nossas janelas e portas em PVC e alumínio são duráveis, isolantes e de design moderno, oferecendo conforto e eficiência com baixa manutenção. </p>
-      <Button text={"Fale Connsco"} />
+      <Button href={"https://tally.so/r/w5eP5Q"} text={"Fale Connsco"} />
     </div>)
   );
 };
@@ -94,10 +93,7 @@ export const ProductCard = ({
           alt={product.title} />
     
 
-      <h2
-        className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
-        {product.title}
-      </h2>
+
     </motion.div>)
   );
 };
