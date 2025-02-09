@@ -1,4 +1,6 @@
 import Conforto from "./sections/Conforto";
+import Contactos from "./sections/Contactos";
+import Footer from "./sections/Footer";
 import { Hero } from "./sections/Hero";
 import Products from "./sections/Products";
 import { Servicos } from "./sections/Serviços";
@@ -15,6 +17,8 @@ export default function Home() {
           <Conforto />
           <Vantagens />
           <Products />
+          <Contactos />
+          <Footer />
           </div>
   );
 }

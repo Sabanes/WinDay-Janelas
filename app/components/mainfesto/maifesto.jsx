@@ -62,7 +62,7 @@ const Manifesto = () => {
   }, []);
 
   return (
-    <section className="manifesto w-dvw" id="manifesto" ref={manifestoRef}>
+    <section className="manifesto w-dvw max-w-7xl mx-auto" id="manifesto" ref={manifestoRef}>
       <div className="container w-full">
         <div className="manifesto-header opacity-0 ">
 
