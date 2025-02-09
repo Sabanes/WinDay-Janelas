@@ -124,9 +124,9 @@ const NavBar = () => {
   return (
     <div className="navbar" ref={navbarRef}>
       <div className="navbar-container">
-        <div className="logo">
-          <a href="#hero">
-            <h3>Winday</h3>
+        <div className="w-12">
+          <a href="#Home">
+            <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/bupiwzjjvaahxyje0ui1" alt="logo" />
           </a>
         </div>
 
