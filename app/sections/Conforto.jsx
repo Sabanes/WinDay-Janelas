@@ -66,7 +66,7 @@ const Conforto = () => {
         ref={quoteRef}
         className='text-sm text-neutral-500'
       >
-        Fundador de Winday, Nikolaj Spasskji
+        Fundador de Winday, Mykola Spaskiy
       </p>
     </div>
   );

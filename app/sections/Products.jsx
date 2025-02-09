@@ -3,7 +3,7 @@ import React from 'react'
 
 const Products = () => {
   return (
-    <section className='py-40 flex flex-col max-w-7xl mx-auto md:w-[90dvw]'>
+    <section id="Produtos" className='py-40 flex flex-col max-w-7xl mx-auto md:w-[90dvw]'>
       <h6 className='text-6xl md:text-8xl text-center md:pr-0 pr-4'>
         <span className='text-[#344CB7]'>Janelas e Portas</span> PVC
       </h6>

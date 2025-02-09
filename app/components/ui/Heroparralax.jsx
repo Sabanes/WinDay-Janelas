@@ -60,7 +60,7 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     (
-    <div
+    <div id="Home"
       className="max-w-7xl md:min-h-[40rem] min-h-[30rem] relative mx-auto flex flex-col justify-center items-center px-4  z-30">
       <h1 className="text-4xl lg:text-[7rem] md:text-7xl text-center font-bold text-[#2b2b2b]">
         Janelas e Portas  <br /> de <span className="text-[#344CB7]">Alta Qualidade</span>

@@ -27,7 +27,7 @@ const TallyEmbedSection = () => {
   }, []);
 
   return (
-    <section className="mx-auto w-[100vw] bg-[#344CB7] py-10">
+    <section id='Contacto' className="mx-auto w-[100vw] bg-[#344CB7] py-10">
       <div className="w-full max-w-7xl mx-auto px-3">
       <iframe data-tally-src="https://tally.so/embed/w5eP5Q?alignLeft=1&hideTitle=0&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="461" frameBorder="0" marginHeight="0" marginWidth="0" title="Fale Conosco"></iframe>
       </div>

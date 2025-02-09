@@ -1,3 +1,4 @@
+import NavBar from "./components/nav/navbar";
 import Conforto from "./sections/Conforto";
 import TallyEmbedSection from "./sections/ContactForm";
 import ContactPage from "./sections/ContactForm";
@@ -15,6 +16,7 @@ import Vantagens from "./sections/Vantagens";
 export default function Home() {
   return (
           <div >
+          <NavBar />
           <Hero />
           <Sobre />
           <Servicos />

@@ -31,7 +31,7 @@ const Vantagens = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-50 md:w-[90dvw] mx-auto">
+    <section id='Vantagens' className="py-12 bg-gray-50 md:w-[90dvw] mx-auto">
       <div className=" mx-auto max-w-7xl px-4">
         <h2 className="text-6xl md:text-8xl text-left max-w-7xl text-gray-900 mb-12">
         Nossas <span className=' text-[#344CB7]'>Vantagens</span>
