@@ -135,10 +135,10 @@ const NavBar = () => {
 
           <div className="nav-links">
             <Link href="#Home">
-              <p>Home</p>
+              <p>Início</p>
             </Link>
             <Link href="#About">
-              <p>About</p>
+              <p>Sobre nos</p>
             </Link>
             <Link href="#Servicos">
               <p>Serviços</p>

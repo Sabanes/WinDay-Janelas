@@ -1,9 +1,10 @@
 .navbar {
   position: fixed;
-  top: 0;
+  top: 0px;
   left: 0;
   width: 100%;
   z-index: 2;
+  padding: 0 1rem;
 }
 
 .navbar-container {
@@ -38,32 +39,40 @@
 }
 
 @media (max-width: 1200px) {
+  .navbar {
+    padding: 0 2rem;
+    top: 30px;
+  }
+  
   .navbar-container {
     width: 90%;
     padding: 1.5rem;
     flex-direction: row;
     align-items: flex-start;
-
   }
-  
+
   .nav-items {
     flex-direction: column;
     align-items: flex-end;
     gap: 1rem;
   }
-  
+
   .nav-links {
     flex-direction: column;
     align-items: flex-end;
     gap: 1rem;
   }
-  
+
   .langs {
     display: none;
   }
 }
 
 @media (max-width: 600px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+  
   .navbar-container {
     width: 100%;
     padding: 0.4rem;

@@ -68,15 +68,15 @@ export const Header = () => {
         As nossas janelas e portas em PVC e alumínio são duráveis, isolantes e de design moderno, oferecendo conforto e eficiência com baixa manutenção.
       </p>
       <Button href={"https://tally.so/r/w5eP5Q"} text={"Fale Connsco"} />
-      <div className="flex flex-col md:flex-row gap-10 md:gap-20 mt-10">
-        <div className=" w-[400px] rounded-lg p-4 flex justify-center">
-          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/flssjn9ry9wj0evwyenz" alt="Logo 1"  />
+      <div className="flex mx-auto flex-col md:flex-row justify-center align-middle gap-10 md:gap-20 mt-10">
+        <div className=" w-[350px] md:w-[400px] rounded-lg p-4 mx-auto flex justify-center">
+          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/flssjn9ry9wj0evwyenz" alt="Logo 1" className="mx-auto"   />
         </div>
-        <div className=" w-[350px] rounded-lg p-4 flex justify-center">
-          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/iypvt1sujt0rnhbmqb7s" alt="Logo 2"  />
+        <div className="mx-auto w-[280px] md:w-[350px] rounded-lg p-4 flex justify-center">
+          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/iypvt1sujt0rnhbmqb7s" alt="Logo 2" className="mx-auto"   />
         </div>
-        <div className=" w-[15350px0px] rounded-lg p-4 flex justify-center">
-          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/xyxzrfb28zmimc60r1wp" alt="Logo 3"  />
+        <div className="mx-auto w-[280px] md:w-[350px] rounded-lg p-4 flex justify-center">
+          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/xyxzrfb28zmimc60r1wp" alt="Logo 3" className="mx-auto"  />
         </div>
       </div>
     </div>)
