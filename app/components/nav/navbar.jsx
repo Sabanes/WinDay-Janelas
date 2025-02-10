@@ -103,13 +103,13 @@ const NavBar = () => {
         <div className="flex justify-between items-center h-16">
           <Link href="#Home" className="flex-shrink-0">
             <img
-              className="h-8 w-auto"
+              className="h-12 w-auto relative top-[0.3rem]"
               src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/n1inal9dy8b5nxlxpydr"
               alt="logo"
             />
           </Link>
 
-          <div className="hidden md:flex md:items-center md:space-x-4 lg:space-x-8">
+          <div className="hidden relative top-[0.25] md:flex md:items-center md:space-x-4 lg:space-x-8">
             <Link
               href="#Home"
               className="nav-link text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
