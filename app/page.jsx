@@ -1,7 +1,6 @@
 import NavBar from "./components/nav/navbar";
 import Conforto from "./sections/Conforto";
 import TallyEmbedSection from "./sections/ContactForm";
-import ContactPage from "./sections/ContactForm";
 import EstoresSection from "./sections/Estores";
 import TiposEstoresSection from "./sections/EstoresTipos";
 import Footer from "./sections/Footer";

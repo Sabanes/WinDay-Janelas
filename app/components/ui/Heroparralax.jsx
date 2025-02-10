@@ -27,7 +27,7 @@ export const HeroParallax = ({
   return (
     (<div
       ref={ref}
-      className="h-[160rem] py-20 pt-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
+      className="h-[180rem] py-20 pt-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
       <Header />
       <motion.div
         style={{
@@ -69,8 +69,8 @@ export const Header = () => {
       </p>
       <Button href={"https://tally.so/r/w5eP5Q"} text={"Fale Connsco"} />
       <div className="flex flex-col md:flex-row gap-10 md:gap-20 mt-10">
-        <div className=" w-[350px] rounded-lg p-4 flex justify-center">
-          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/jhafili7as42nd7wka5j" alt="Logo 1"  />
+        <div className=" w-[400px] rounded-lg p-4 flex justify-center">
+          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/flssjn9ry9wj0evwyenz" alt="Logo 1"  />
         </div>
         <div className=" w-[350px] rounded-lg p-4 flex justify-center">
           <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/iypvt1sujt0rnhbmqb7s" alt="Logo 2"  />
