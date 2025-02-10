@@ -9,7 +9,7 @@ export default function EstoresSection() {
           <div className="lg:w-1/2">
             <Image
             loading="lazy"
-              src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/s04yxxpwqwnwwislanx7"
+              src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/ns48znw3ebtk304v7jfi"
               alt="Estores"
               width={600}
               height={400}

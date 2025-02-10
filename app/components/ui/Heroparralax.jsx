@@ -69,14 +69,14 @@ export const Header = () => {
       </p>
       <Button href={"https://tally.so/r/w5eP5Q"} text={"Fale Connsco"} />
       <div className="flex flex-col md:flex-row gap-10 md:gap-20 mt-10">
-        <div className="bg-white w-[150px] rounded-lg p-4 flex justify-center">
-          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/oiszpy9niqunfkouvkqd" alt="Logo 1" className="h-12" />
+        <div className=" w-[350px] rounded-lg p-4 flex justify-center">
+          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/jhafili7as42nd7wka5j" alt="Logo 1"  />
         </div>
-        <div className="bg-white w-[150px] rounded-lg p-4 flex justify-center">
-          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/gwmxknbla4wraywhjj7y" alt="Logo 2" className="h-12" />
+        <div className=" w-[350px] rounded-lg p-4 flex justify-center">
+          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/iypvt1sujt0rnhbmqb7s" alt="Logo 2"  />
         </div>
-        <div className="bg-white w-[150px] rounded-lg p-4 flex justify-center">
-          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/biz39qyzonzpzb9nschd" alt="Logo 3" className="h-12" />
+        <div className=" w-[15350px0px] rounded-lg p-4 flex justify-center">
+          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/xyxzrfb28zmimc60r1wp" alt="Logo 3"  />
         </div>
       </div>
     </div>)
