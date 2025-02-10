@@ -18,6 +18,10 @@ export default {
         foreground: "var(--foreground)",
         main: "var(--main)",
       },
+      transitionProperty: {
+        height: "height",
+        spacing: "margin, padding",
+      },
     },
   },
   plugins: [addVariablesForColors, require('@tailwindcss/forms')]

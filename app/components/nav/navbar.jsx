@@ -1,163 +1,230 @@
 "use client"
-import React, { useEffect, useState, useRef } from "react";
-import gsap from "gsap";
-import "./navbar.css";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import ScrollToPlugin from "gsap/ScrollToPlugin";
-import Link from "next/link";
+import { useEffect, useState, useRef } from "react"
+import gsap from "gsap"
+import ScrollTrigger from "gsap/ScrollTrigger"
+import ScrollToPlugin from "gsap/ScrollToPlugin"
+import Link from "next/link"
 
 const NavBar = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  const lastScrollY = useRef(0);
-  const navbarRef = useRef(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const lastScrollY = useRef(0)
+  const navbarRef = useRef(null)
+  const menuRef = useRef(null)
+  const scrollTimeout = useRef(null)
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 900);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY.current) {
-        gsap.to(navbarRef.current, {
-          opacity: 0,
-          duration: 0.3,
-          ease: "power2.out",
-        });
-      } else {
-        gsap.to(navbarRef.current, {
-          opacity: 1,
-          duration: 0.3,
-          ease: "power2.out",
-        });
+      // Clear the previous timeout
+      if (scrollTimeout.current) {
+        window.cancelAnimationFrame(scrollTimeout.current)
       }
 
-      lastScrollY.current = currentScrollY;
-    };
+      // Use requestAnimationFrame for smooth animation
+      scrollTimeout.current = window.requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY
 
-    window.addEventListener("scroll", handleScroll);
-
-    ScrollTrigger.getAll().forEach((trigger) => {
-      if (trigger.vars.trigger === ".footer") {
-        trigger.kill();
-      }
-    });
-
-    ScrollTrigger.create({
-      trigger: ".footer",
-      start: isMobile ? "top 90%" : "top 80%",
-      end: "bottom top",
-      onEnter: () => {
-        const navbar = document.querySelector(".navbar");
-        if (navbar) navbar.classList.add("dark");
-      },
-      onLeaveBack: () => {
-        const navbar = document.querySelector(".navbar");
-        if (navbar) navbar.classList.remove("dark");
-      },
-      onRefresh: () => {
-        const navbar = document.querySelector(".navbar");
-        const footerBounds = document
-          .querySelector(".footer")
-          ?.getBoundingClientRect();
-        if (navbar && footerBounds) {
-          const triggerPoint = window.innerHeight * (isMobile ? 0.9 : 0.8);
-          if (footerBounds.top <= triggerPoint) {
-            navbar.classList.add("dark");
-          } else {
-            navbar.classList.remove("dark");
-          }
+        if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+          gsap.to(navbarRef.current, {
+            y: "-100%",
+            duration: 0.2,
+            ease: "power4.out",
+          })
+        } else {
+          gsap.to(navbarRef.current, {
+            y: "0%",
+            duration: 0.2,
+            ease: "power4.out",
+          })
         }
-      },
-    });
 
-    const handleClick = (e) => {
-      e.preventDefault();
-      const href = e.currentTarget.getAttribute("href");
-      const element = document.querySelector(href);
+        lastScrollY.current = currentScrollY
+      })
+    }
 
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
-        const targetPosition = rect.top + scrollTop;
-
-        const navbarHeight =
-          document.querySelector(".navbar")?.offsetHeight || 0;
-
-        window.scrollTo({
-          top: targetPosition - navbarHeight,
-          behavior: "smooth",
-        });
-      }
-    };
-
-    const links = document.querySelectorAll(".nav-links a, .logo a");
-    links.forEach((link) => {
-      link.removeEventListener("click", handleClick);
-      link.addEventListener("click", handleClick);
-    });
+    window.addEventListener("scroll", handleScroll, { passive: true })
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      ScrollTrigger.getAll().forEach((trigger) => {
-        if (trigger.vars.trigger === ".footer") {
-          trigger.kill();
-        }
-      });
+      window.removeEventListener("scroll", handleScroll)
+      if (scrollTimeout.current) {
+        window.cancelAnimationFrame(scrollTimeout.current)
+      }
+    }
+  }, [])
+
+  useEffect(() => {
+    const handleClick = (e) => {
+      e.preventDefault()
+      const href = e.currentTarget.getAttribute("href")
+      const element = document.querySelector(href)
+
+      if (element) {
+        const navbarHeight = navbarRef.current?.offsetHeight || 0
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+        const offsetPosition = elementPosition - navbarHeight
+
+        gsap.to(window, {
+          duration: 0.5,
+          scrollTo: {
+            y: offsetPosition,
+            autoKill: false
+          },
+          ease: "power2.inOut"
+        })
+      }
+
+      setIsMenuOpen(false)
+    }
+
+    const links = document.querySelectorAll(".nav-link")
+    links.forEach((link) => {
+      link.addEventListener("click", handleClick)
+    })
+
+    return () => {
       links.forEach((link) => {
-        link.removeEventListener("click", handleClick);
-      });
-    };
-  }, [isMobile]);
+        link.removeEventListener("click", handleClick)
+      })
+    }
+  }, [])
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   return (
-    <div className="navbar" ref={navbarRef}>
-      <div className="navbar-container">
-        <div className="w-[7rem]">
-          <a href="#Home">
-            <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/n1inal9dy8b5nxlxpydr" alt="logo" />
-          </a>
-        </div>
+    <nav
+      ref={navbarRef}
+      className="fixed top-0 left-0 w-full z-50 bg-white bg-opacity-70 backdrop-blur-lg shadow-md transform translate-y-0"
+    >
+      {/* Rest of the JSX remains the same */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <Link href="#Home" className="flex-shrink-0">
+            <img
+              className="h-8 w-auto"
+              src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/n1inal9dy8b5nxlxpydr"
+              alt="logo"
+            />
+          </Link>
 
-        <div className="nav-items">
+          <div className="hidden md:flex md:items-center md:space-x-4 lg:space-x-8">
+            <Link
+              href="#Home"
+              className="nav-link text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Início
+            </Link>
+            <Link
+              href="#About"
+              className="nav-link text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Sobre nos
+            </Link>
+            <Link
+              href="#Servicos"
+              className="nav-link text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Serviços
+            </Link>
+            <Link
+              href="#Vantagens"
+              className="nav-link text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Vantagens
+            </Link>
+            <Link
+              href="#Produtos"
+              className="nav-link text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Produtos
+            </Link>
+            <Link
+              href="#Contacto"
+              className="nav-link text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Fale Conosco
+            </Link>
+          </div>
 
-
-          <div className="nav-links">
-            <Link href="#Home">
-              <p>Início</p>
-            </Link>
-            <Link href="#About">
-              <p>Sobre nos</p>
-            </Link>
-            <Link href="#Servicos">
-              <p>Serviços</p>
-            </Link>
-            <Link href="#Vantagens">
-              <p>Vantagens</p>
-            </Link>
-            <Link href="#Produtos">
-              <p>Produtos</p>
-            </Link>
-            <Link href="#Contacto">
-              <p>Fale Conosco</p>
-            </Link>
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              aria-expanded="false"
+            >
+              <span className="sr-only">Open main menu</span>
+              {isMenuOpen ? (
+                <svg
+                  className="block h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg
+                  className="block h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
           </div>
         </div>
       </div>
-    </div>
-  );
-};
 
-export default NavBar;
-    
+      <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"}`}>
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <Link
+            href="#Home"
+            className="nav-link text-gray-800 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+          >
+            Início
+          </Link>
+          <Link
+            href="#About"
+            className="nav-link text-gray-800 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+          >
+            Sobre nos
+          </Link>
+          <Link
+            href="#Servicos"
+            className="nav-link text-gray-800 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+          >
+            Serviços
+          </Link>
+          <Link
+            href="#Vantagens"
+            className="nav-link text-gray-800 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+          >
+            Vantagens
+          </Link>
+          <Link
+            href="#Produtos"
+            className="nav-link text-gray-800 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+          >
+            Produtos
+          </Link>
+          <Link
+            href="#Contacto"
+            className="nav-link text-gray-800 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+          >
+            Fale Conosco
+          </Link>
+        </div>
+      </div>
+    </nav>
+  )
+}
+
+export default NavBar
