@@ -18,7 +18,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center mb-3">
                 <FiMail className="mr-2" />
-                <a href="mailto:nikolaj.spasskij@gmail.com" className="hover:text-blue-400 underline">nikolaj.spasskij@gmail.com</a>
+                <a href="mailto:geralwinday@gmail.com" className="hover:text-blue-400 underline">geralwinday@gmail.com</a>
               </div>
             </address>
           </div>

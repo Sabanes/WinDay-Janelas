@@ -114,7 +114,7 @@ export default function RootLayout({ children }) {
     <html lang="pt">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#344CB7" />
+        <meta name="theme-color" content="#493F0B" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <script

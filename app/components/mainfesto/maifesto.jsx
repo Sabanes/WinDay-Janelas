@@ -1,4 +1,4 @@
-"use client"
+/* "use client"
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -34,7 +34,7 @@ const Manifesto = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".manifesto",
-        start: "top 35%",
+        start: "top 5%",
         end: "bottom 75%",
         scrub: true,
         markers: false,
@@ -68,9 +68,9 @@ const Manifesto = () => {
 
           <p>Manifesto</p>
         </div>
-        <div className="manifesto-title !w-[90dvw]">
-          <h1 className="pb-20 pr-10">
-          Somos especialistas na venda e instalação de janelas de metaloplástico com perfil <span className=" text-[var(--main)]">Cortizo</span>, oferecendo soluções que combinam inovação, estética e eficiência energética para <span className="text-[var(--main)]">casas</span> e <span className="text-[var(--main)]">negócios</span>.   
+        <div className="manifesto-title">
+          <h1 className="pb-20 ">
+          Somos especialistas na venda e instalação de janelas de metaloplástico com perfil <span className=" text-[var(--main)]">Cortizo</span> oferecendo soluções que combinam inovação, estética e eficiência energética para <span className="text-[var(--main)]">casas</span> e <span className="text-[var(--main)]">negócios</span>.   
           </h1>
         </div>
       </div>
@@ -78,4 +78,4 @@ const Manifesto = () => {
   );
 };
 
-export default Manifesto;
+export default Manifesto; */

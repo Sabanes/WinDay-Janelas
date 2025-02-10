@@ -27,7 +27,7 @@ export const HeroParallax = ({
   return (
     (<div
       ref={ref}
-      className="h-[160rem] py-20 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
+      className="h-[160rem] py-20 pt-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
       <Header />
       <motion.div
         style={{
@@ -60,14 +60,25 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     (
-    <div id="Home"
-      className="max-w-7xl md:min-h-[40rem] min-h-[30rem] relative mx-auto flex flex-col justify-center items-center px-4  z-30">
+      <div id="Home" className="max-w-7xl md:min-h-[40rem] min-h-[30rem] relative mx-auto flex flex-col justify-center items-center px-4 z-30">
       <h1 className="text-4xl lg:text-[7rem] md:text-7xl text-center font-bold text-[#2b2b2b]">
-        Janelas e Portas  <br /> de <span className="text-[var(--main)]">Alta Qualidade</span>
+        Janelas e Portas <br /> de <span className="text-[var(--main)]">Alta Qualidade</span>
       </h1>
       <p className="max-w-xl text-base md:text-xl mt-3 text-center text-neutral-900">
-      As nossas janelas e portas em PVC e alumínio são duráveis, isolantes e de design moderno, oferecendo conforto e eficiência com baixa manutenção. </p>
+        As nossas janelas e portas em PVC e alumínio são duráveis, isolantes e de design moderno, oferecendo conforto e eficiência com baixa manutenção.
+      </p>
       <Button href={"https://tally.so/r/w5eP5Q"} text={"Fale Connsco"} />
+      <div className="flex flex-col md:flex-row gap-10 md:gap-20 mt-10">
+        <div className="bg-white w-[150px] rounded-lg p-4 flex justify-center">
+          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/oiszpy9niqunfkouvkqd" alt="Logo 1" className="h-12" />
+        </div>
+        <div className="bg-white w-[150px] rounded-lg p-4 flex justify-center">
+          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/gwmxknbla4wraywhjj7y" alt="Logo 2" className="h-12" />
+        </div>
+        <div className="bg-white w-[150px] rounded-lg p-4 flex justify-center">
+          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/biz39qyzonzpzb9nschd" alt="Logo 3" className="h-12" />
+        </div>
+      </div>
     </div>)
   );
 };
