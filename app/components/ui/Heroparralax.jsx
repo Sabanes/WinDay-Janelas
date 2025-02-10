@@ -27,7 +27,7 @@ export const HeroParallax = ({
   return (
     (<div
       ref={ref}
-      className="h-[180rem] py-20 pt-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
+      className="h-[150rem] py-20 pt-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
       <Header />
       <motion.div
         style={{
@@ -61,24 +61,41 @@ export const Header = () => {
   return (
     (
       <div id="Home" className="max-w-7xl md:min-h-[40rem] min-h-[30rem] relative mx-auto flex flex-col justify-center items-center px-4 z-30">
-      <h1 className="text-4xl lg:text-[7rem] md:text-7xl text-center font-bold text-[#2b2b2b]">
-        Janelas e Portas <br /> de <span className="text-[var(--main)]">Alta Qualidade</span>
-      </h1>
+      <div className="flex flex-col md:flex-row justify-center align-middle text-center">
+        <img 
+          src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/zcwe1xsopow4zd0ojyzg" 
+          alt="logo winday" 
+          className="self-center mx-auto lg:mr-4 w-[6rem]" 
+        />
+        <div className="relative flex">
+          <h1 className="text-6xl uppercase lg:text-[7rem] md:text-7xl text-center self-center font-bold text-[#493F0B]">
+            Winday
+          </h1>
+          <div className="absolute left-[75%] -translate-x-1/2 w-full -bottom-6">
+            <svg 
+              viewBox="0 0 400 40" 
+              className=" hidden md:flex w-[150%] h-12 -ml-[25%] -rotate-[3deg] " // Makes SVG wider than the text
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M 10 30 Q 200 -20 390 30"
+                stroke="#493F0B"
+                strokeWidth="4"
+                strokeLinecap="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <h2 className="max-w-4xl text-center font-semibold md:pt-5 text-2xl md:text-4xl">
+        Janelas e Portas PVC de Alta Qualidade <br /> 
+        Sua Escolha Ideal Para Janelas Que Abrem Novos Horizontes
+      </h2>
       <p className="max-w-xl text-base md:text-xl mt-3 text-center text-neutral-900">
         As nossas janelas e portas em PVC e alumínio são duráveis, isolantes e de design moderno, oferecendo conforto e eficiência com baixa manutenção.
       </p>
-      <Button href={"https://tally.so/r/w5eP5Q"} text={"Fale Connsco"} />
-      <div className="flex mx-auto flex-col md:flex-row justify-center align-middle gap-10 md:gap-20 mt-10">
-        <div className=" w-[350px] md:w-[400px] rounded-lg p-4 mx-auto flex justify-center">
-          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/flssjn9ry9wj0evwyenz" alt="Logo 1" className="mx-auto"   />
-        </div>
-        <div className="mx-auto w-[280px] md:w-[350px] rounded-lg p-4 flex justify-center">
-          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/iypvt1sujt0rnhbmqb7s" alt="Logo 2" className="mx-auto"   />
-        </div>
-        <div className="mx-auto w-[280px] md:w-[350px] rounded-lg p-4 flex justify-center">
-          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/xyxzrfb28zmimc60r1wp" alt="Logo 3" className="mx-auto"  />
-        </div>
-      </div>
+      <Button href="https://tally.so/r/w5eP5Q" text="Fale Connsco" />
     </div>)
   );
 };
@@ -108,3 +125,14 @@ export const ProductCard = ({
     </motion.div>)
   );
 };
+{/*       <div className="flex mx-auto flex-col md:flex-row justify-center align-middle gap-10 md:gap-20 mt-10">
+        <div className=" w-[250px] md:w-[400px] rounded-lg p-4 mx-auto flex justify-center">
+          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/flssjn9ry9wj0evwyenz" alt="Logo 1" className="mx-auto"   />
+        </div>
+        <div className="mx-auto w-[250px] md:w-[350px] rounded-lg p-4 flex justify-center">
+          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/iypvt1sujt0rnhbmqb7s" alt="Logo 2" className="mx-auto"   />
+        </div>
+        <div className="mx-auto w-[250px] md:w-[350px] rounded-lg p-4 flex justify-center">
+          <img src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/xyxzrfb28zmimc60r1wp" alt="Logo 3" className="mx-auto"  />
+        </div>
+      </div> */}

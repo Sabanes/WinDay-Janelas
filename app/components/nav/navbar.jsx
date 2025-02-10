@@ -27,7 +27,7 @@ const NavBar = () => {
 
         if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
           gsap.to(navbarRef.current, {
-            y: "-100%",
+            y: "0%",
             duration: 0.2,
             ease: "power4.out",
           })
@@ -96,14 +96,14 @@ const NavBar = () => {
   return (
     <nav
       ref={navbarRef}
-      className="fixed top-0 left-0 w-full z-50 bg-white bg-opacity-70 backdrop-blur-lg shadow-md transform translate-y-0"
+      className="fixed top-0 left-0 w-full z-50 bg-white bg-opacity-30 backdrop-blur-lg shadow-md transform translate-y-0"
     >
       {/* Rest of the JSX remains the same */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="#Home" className="flex-shrink-0">
             <img
-              className="h-12 w-auto relative top-[0.3rem]"
+              className="h-[4rem] w-auto relative top-[0.3rem]"
               src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/n1inal9dy8b5nxlxpydr"
               alt="logo"
             />

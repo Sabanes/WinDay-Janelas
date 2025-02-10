@@ -11,12 +11,14 @@ import { Servicos } from "./sections/Serviços";
 
 import Sobre from "./sections/Sobre";
 import Vantagens from "./sections/Vantagens";
+import PartnersSection from "./sections/partners";
 
 export default function Home() {
   return (
           <div >
           <NavBar />
           <Hero />
+          <PartnersSection />
           <Sobre />
           <Servicos />
           <Conforto />
