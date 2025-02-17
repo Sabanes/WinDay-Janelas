@@ -28,7 +28,7 @@ const Products = () => {
         <div className='flex md:w-[50vw] w-[90vw] bg-[var(--main)] flex-col items-center rounded-lg py-8 px-4'>
           <div className='flex flex-col items-center  bg-white p-2 rounded-lg'>
             <img 
-              src="https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/gsjiz9rvlilfz1tw9g1s" 
+              src="https://res.cloudinary.com/dcraqvlmb/image/upload/v1739035817/gt6bprxdoaadcjadfonh.avif" 
               className='max-w-[300px] z-10' 
               alt="" 
             />
